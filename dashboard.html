@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <h2>Add Blog Post</h2>
+    <form id="blogPostForm">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="excerpt">Excerpt:</label><br>
+        <textarea id="excerpt" name="excerpt" required></textarea><br>
+        <label for="date">Date:</label><br>
+        <input type="datetime-local" id="date" name="date" required><br>
+        <input type="submit" value="Add Blog Post">
+    </form>
+
+    <h2>Add Project</h2>
+    <form id="projectForm">
+        <label for="projectTitle">Project Title:</label><br>
+        <input type="text" id="projectTitle" name="projectTitle" required><br>
+        <label for="projectImage">Upload Image:</label><br>
+        <input type="file" id="projectImage" name="projectImage" accept="image/*" required><br>
+        <input type="submit" value="Add Project">
+    </form>
+
+    <button id="resetButton">Reset Local Storage</button>
+
+    <script>
+        // Form submission handlers that will prevent default behavior
+        document.getElementById('blogPostForm').onsubmit = function(e) {
+            e.preventDefault();
+            const title = this.title.value;
+            const excerpt = this.excerpt.value;
+            const date = this.date.value;
+            // Save blog post in localStorage (or other processing)
+            console.log('New Blog Post:', { title, excerpt, date });
+        };
+
+        document.getElementById('projectForm').onsubmit = function(e) {
+            e.preventDefault();
+            const title = this.projectTitle.value;
+            const imageFile = this.projectImage.files[0];
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageData = event.target.result;
+                // Save project details with imageData (or other processing)
+                console.log('New Project:', { title, imageData });
+            };
+            reader.readAsDataURL(imageFile);
+        };
+
+        document.getElementById('resetButton').onclick = function() {
+            localStorage.clear();
+            console.log('Local storage has been reset.');
+        };
+    </script>
+</body>
+</html>
