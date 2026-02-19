@@ -1,46 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المدونة</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            direction: rtl;
-            text-align: right;
-        }
-        .blogList {
-            margin: 20px;
-        }
-        .post {
-            margin-bottom: 20px;
-        }
-        .date {
-            color: gray;
-        }
-    </style>
+    <title>مدونة</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>المدونة</h1>
-    <div class="blogList" id="blogList">
-        <!-- Blog posts will be rendered here -->
-    </div>
-    <script>
-        // Assuming blog posts are stored in localStorage in JSON format
-        const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-
-        const blogListElement = document.getElementById('blogList');
-        blogPosts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('post');
-            postElement.innerHTML = `
-                <div class="date">${post.date}</div>
-                <h2>${post.title}</h2>
-                <p>${post.excerpt}</p>
-            `;
-            blogListElement.appendChild(postElement);
-        });
-    </script>
+    <header>
+        <h1>مرحبًا بك في مدونتي!</h1>
+    </header>
+    <main>
+        <article>
+            <h2>عنوان المقال الأول</h2>
+            <p>هذه فقرة من المقال الأول باللغة العربية. تحتوي على معلومات مثيرة للاهتمام حول الموضوعات المختلفة.</p>
+        </article>
+        <article>
+            <h2>عنوان المقال الثاني</h2>
+            <p>هذه فقرة من المقال الثاني باللغة العربية. يمكن أن يتحدث عن تجربة أو فكرة مميزة.</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2026 Za1in</p>
+    </footer>
 </body>
 </html>
