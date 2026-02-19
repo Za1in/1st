@@ -1,62 +1,69 @@
-.corporate-style {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f8f9fa;
+.body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.header {
-    padding: 20px;
-    text-align: right;
-    border-bottom: 1px solid #eaeaea;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav li {
-    margin-left: 20px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #0056b3;
-    font-weight: bold;
-}
-
-.section {
-    padding: 20px;
-}
-
-.section h2 {
-    font-size: 20px;
-    text-align: right;
-}
-
-.footer {
-    padding: 10px;
-    text-align: right;
-    border-top: 1px solid #eaeaea;
+p {
+    font-weight: 400;
 }
 
 .button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    font-weight: 500;
+    background-color: #C7A27C;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    text-align: right;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #A68661;
+}
+
+@media (max-width: 768px) {
+    .body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .body {
+        font-size: 18px;
+    }
+}
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #000000;
+    --accent-color: #C7A27C;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 500;
+    src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 700;
+    src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-weight: 800;
+    src: url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
 }
