@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemap>
+    <url>
+        <loc>https://example.com/index.html</loc>
+        <lastmod>2026-02-19</lastmod>
+    </url>
+    <url>
+        <loc>https://example.com/blog.html</loc>
+        <lastmod>2026-02-19</lastmod>
+    </url>
+    <url>
+        <loc>https://example.com/dashboard.html</loc>
+        <lastmod>2026-02-19</lastmod>
+    </url>
+    <url>
+        <loc>https://example.com/company-profile.html</loc>
+        <lastmod>2026-02-19</lastmod>
+    </url>
+</sitemap>
